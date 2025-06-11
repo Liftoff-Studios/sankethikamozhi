@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'Manjariregular';
+    src: url('assets/Manjari-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+} 
+
+@font-face {
+    font-family: 'Anjalioldlipi';
+    src: url('assets/anjalioldlipi.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+} 
+
+
+body{
+    font-family: Anjalioldlipi,sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    padding:0;
+    margin:0;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav{
+    padding:15px;
+    padding-top:23px;
+    width:100vw;
+    box-sizing: border-box;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: rgb(0, 178, 133);
+    box-shadow:0px 0px 7px 2px gray;
+}
+
+#navTitle{
+    font-size:2em;
+    font-weight:bold;
+    color:white;
+}
+
+#linkList{
+    display:flex;
+    flex-direction: row;
+    color:white;
+}
+
+#linkList a{
+    padding-right:7px;
+    cursor:pointer;
+    text-decoration:none;
+    color:white;
+}
+
+.active{
+    color:rgb(118, 232, 105) !important;
+}
+
+main{
+    padding:10px;
+    color:rgb(22, 11, 1);
+    max-width:650px;
+}
+
+footer{
+    padding:15px;
+    padding-top:17px;
+    width:100vw;
+    box-sizing: border-box;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: rgb(0, 178, 133);
+    color:white;
+}
+
+details{
+    font-size:0.93em;
+}
+
+.search-bar-cont{
+    border:1px black solid;
+    max-width:650px;
+    width:100vw;
+    padding:10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.search-bar-cont input{
+    padding:7px;
+    box-sizing: border-box;
+    width:100%
+}
