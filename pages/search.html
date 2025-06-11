@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="ml">
+    <head>
+        <title>സാങ്കേതികമൊഴി</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="styles.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <nav>
+            <div id="navTitle">സാങ്കേതികമൊഴി</div>
+            <div id="linkList">
+                <a href="./main.html">പൂമുറ്റം</a> 
+                <a href="./search.html" class="active">തിരയുക</a>
+                <a href="./help.html">തുണ</a>
+                <a href="./contact.html">ഇടപഴകുക</a>
+            </div>
+        </nav>
+        <main>
+            <div class="search-bar-cont">
+                <input id="content" type="text" placeholder="ഇവിടെ വാക്കിടുക || Enter Word Here"/><button onClick="searchWords()">തിരയുക || Search</button>
+            </div>
+            <ol id="word-list">
+
+            </ol>
+        </main>
+        
+        <footer>
+            പകൎപ്പുരിമ @ ൨൲൨൰൫ || &nbsp;<span style="font-size:0.9em">Copyright @ 2025</span>
+        </footer>
+
+        <script src="levenshtein.js"></script>
+        <script>
+
+            //Search Function
+            let searchWords = ()=>{
+                let data = "";
+                fetch("../assets/words.json").then((data)=>data.json()).then((d)=>{
+                    data = d;
+
+                    let cont = document.getElementById("content").value.replaceAll(" ","").replaceAll("-","");
+                    let RegEx = /^[a-z0-9]+$/i;
+                    if(RegEx.test(cont)){
+                        //For English Searches
+
+                        let final = data.words.sort((curr, next)=>{
+                            let t = new Levenshtein(curr[1].replaceAll(" ","").replaceAll("-",""),cont)
+                            let d = new Levenshtein(next[1].replaceAll(" ","").replaceAll("-",""),cont)
+                            return t-d;
+                        })
+
+                        document.getElementById("word-list").innerHTML = "";
+                        final.map((e)=>{
+                            document.getElementById("word-list").innerHTML += `<li>${e[1]} - ${e[0]} - ${e[2]}</li>`;
+                        })
+                    }else{
+                        //For Malayalam Searches
+
+                        let final = data.words.sort((curr, next)=>{
+                            let t = new Levenshtein(curr[0].replaceAll(" ","").replaceAll("-",""),cont)
+                            let d = new Levenshtein(next[0].replaceAll(" ","").replaceAll("-",""),cont)
+                            return t-d;
+                        })
+
+                        document.getElementById("word-list").innerHTML = "";
+                        final.map((e)=>{
+                            document.getElementById("word-list").innerHTML += `<li>${e[0]} - ${e[1]} - ${e[2]}</li>`;
+                        })
+                    }
+                }) 
+            };
+
+        </script>
+    </body>
+</html>
