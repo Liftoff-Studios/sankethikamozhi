@@ -1,2 +1,4 @@
-# sankethikamozhi
-സാങ്കേതികപദാവലി || Technical Term in Malayalam
+# സാങ്കേതിമൊഴി || Sankethikamozhi
+
+ഈ സംരംഭത്തിൽ വാക്കുകൾ ചേൎക്കാൻ നിങ്ങൾക്കു് Github Comments വഴി പങ്കെടുക്കാം.
+
