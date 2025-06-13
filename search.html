@@ -35,7 +35,7 @@
             //Search Function
             let searchWords = ()=>{
                 let data = "";
-                fetch("../assets/words.json").then((data)=>data.json()).then((d)=>{
+                fetch("./assets/words.json").then((data)=>data.json()).then((d)=>{
                     data = d;
 
                     let cont = document.getElementById("content").value.replaceAll(" ","").replaceAll("-","");
