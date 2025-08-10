@@ -3,6 +3,7 @@
     "lang2":"en",
     "words":[
         ["ചാൽ", "channel", "noun"],
+        ["വിവരപ്പലക","display","noun"],
         ["വിനിമയച്ചാൽ", "channel", "noun"],
         ["കൂട്ടായ്മ", "community","noun"],
         ["പ്രതലപ്പിളർപ്പു്","screenshot","noun"],
@@ -115,3 +116,4 @@
         ["തിരകുക","insert","verb"]
     ]
 }
+
