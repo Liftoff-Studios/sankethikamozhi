@@ -2,6 +2,7 @@
     "lang1":"ml",
     "lang2":"en",
     "words":[
+        ["ഉൾപ്പണിഞ്ഞ","built-in","adjective"],
         ["ചാൽ", "channel", "noun"],
         ["വിവരപ്പലക","display","noun"],
         ["വിനിമയച്ചാൽ", "channel", "noun"],
@@ -116,4 +117,5 @@
         ["തിരകുക","insert","verb"]
     ]
 }
+
 
